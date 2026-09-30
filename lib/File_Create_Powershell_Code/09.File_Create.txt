@@ -1,0 +1,82 @@
+# Root Directory
+$baseDir = "09.Testing_Security_Deployment_and_CI-CD"
+
+# Helper Function for Practical-Based Topics
+function Create-PracticalBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Work_Flow.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Task.md" -Force | Out-Null
+}
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# 1. Testing Suite
+$testingPath = "$baseDir\01.Testing_Suite"
+
+# 01. Unit and Widget Testing
+Create-CodeBasedTopic "$testingPath\01.Unit_and_Widget_Testing\01.Unit_Testing_Business_Logic"
+Create-CodeBasedTopic "$testingPath\01.Unit_and_Widget_Testing\02.Widget_Testing_UI_Components"
+Create-CodeBasedTopic "$testingPath\01.Unit_and_Widget_Testing\03.Integration_Testing_Basics"
+
+# 02. End To End Testing
+Create-CodeBasedTopic "$testingPath\02.End_To_End_Testing\01.Integration_Testing_End_to_End_Flow"
+Create-CodeBasedTopic "$testingPath\02.End_To_End_Testing\02.patrol_and_integration_test_Framework"
+
+# 03. Mocking and Test Doubles
+Create-CodeBasedTopic "$testingPath\03.Mocking_and_Test_Doubles\01.Mocktail_and_Mockito"
+Create-CodeBasedTopic "$testingPath\03.Mocking_and_Test_Doubles\02.Golden_Testing_and_Snapshot"
+
+
+# 2. Security and Performance
+$securityPath = "$baseDir\02.Security_and_Performance"
+
+# 01. App Security
+Create-CodeBasedTopic "$securityPath\01.App_Security\01.App_Security_Obfuscation_SSL_Pinning"
+Create-CodeBasedTopic "$securityPath\01.App_Security\02.Secure_Coding_and_Sensitive_Data_Handling"
+Create-CodeBasedTopic "$securityPath\01.App_Security\03.JWT_and_Token_Secure_Storage"
+
+# 02. Performance Optimization
+Create-CodeBasedTopic "$securityPath\02.Performance_Optimization\01.Flutter_DevTools_Impeller_Engine_Optimization"
+Create-CodeBasedTopic "$securityPath\02.Performance_Optimization\02.DevTools_Memory_Optimization_Impeller"
+Create-CodeBasedTopic "$securityPath\02.Performance_Optimization\03.Build_Size_Reduction_and_Tree_Shaking"
+Create-CodeBasedTopic "$securityPath\02.Performance_Optimization\04.Jank_Reduction_and_Profile_Mode"
+
+
+# 3. Deployment and CI/CD
+$deployPath = "$baseDir\03.Deployment_and_CI_CD"
+
+# 01. App Publishing (Practical Based Setup & Config Topics)
+Create-PracticalBasedTopic "$deployPath\01.App_Publishing\01.PlayStore_AppStore_Desktop_Web_Deployment"
+Create-PracticalBasedTopic "$deployPath\01.App_Publishing\02.Android_Signing_Keystore_and_Play_Console"
+Create-PracticalBasedTopic "$deployPath\01.App_Publishing\03.iOS_Provisioning_AppStore_Connect"
+Create-CodeBasedTopic "$deployPath\01.App_Publishing\04.Flutter_Web_and_Desktop_Windows_macOS_Linux"
+
+# 02. Automated Pipelines
+Create-CodeBasedTopic "$deployPath\02.Automated_Pipelines\01.CI_CD_GitHub_Actions_Codemagic"
+Create-CodeBasedTopic "$deployPath\02.Automated_Pipelines\02.Fastlane_Automation_and_Distribution"
+
+
+# 4. Internationalization and Accessibility
+$i18nPath = "$baseDir\04.Internationalization_and_Accessibility"
+
+Create-CodeBasedTopic "$i18nPath\02.EasyLocalization_and_gen_l10n"
+Create-CodeBasedTopic "$i18nPath\03.RTL_Support_and_Bengali_Locale"
+Create-CodeBasedTopic "$i18nPath\04.Semantics_and_Screen_Reader_Accessibility"
+
+
+# 5. Code Quality and Tooling
+$qualityPath = "$baseDir\05.Code_Quality_and_Tooling"
+
+Create-CodeBasedTopic "$qualityPath\01.Dart_Linter_and_analysis_options"
+Create-CodeBasedTopic "$qualityPath\02.flutter_lints_and_custom_lint_rules"
+Create-CodeBasedTopic "$qualityPath\03.mason_and_Code_Generation_CLI"
+
+Write-Host "মডিউল ০৯ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

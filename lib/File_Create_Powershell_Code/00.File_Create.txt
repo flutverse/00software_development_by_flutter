@@ -1,0 +1,60 @@
+# Root Directory
+$baseDir = "00.Getting_Started_and_Setup"
+
+# Helper Function for Theory-Based Topics
+function Create-TheoryBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+}
+
+# Helper Function for Practical-Based Topics
+function Create-PracticalBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Work_Flow.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Task.md" -Force | Out-Null
+}
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# 1. Introduction To Flutter (Theory Based)
+$introPath = "$baseDir\01.Introduction_To_Flutter"
+Create-TheoryBasedTopic "$introPath\01.What_is_Flutter_and_Why_Use_It"
+Create-TheoryBasedTopic "$introPath\02.Flutter_vs_Native_vs_Other_Frameworks"
+Create-TheoryBasedTopic "$introPath\03.Flutter_Architecture_Overview"
+Create-TheoryBasedTopic "$introPath\04.Flutter_Release_Model_Stable_Beta_Master"
+
+# 2. System Environment (Practical Based Setup & Config)
+$envPath = "$baseDir\02.System_Environment"
+Create-PracticalBasedTopic "$envPath\01.System_Requirement"
+Create-PracticalBasedTopic "$envPath\02.BIOS_Setting"
+Create-PracticalBasedTopic "$envPath\03.Dual_Booting"
+
+# 3. Installation and Tools (Practical Based Setup)
+$installPath = "$baseDir\03.Installation_and_Tools"
+Create-PracticalBasedTopic "$installPath\01.Install_Git_and_GitHub_Desktop"
+Create-PracticalBasedTopic "$installPath\02.Install_Flutter_SDK"
+Create-PracticalBasedTopic "$installPath\03.Install_Editor_and_Extension"
+Create-PracticalBasedTopic "$installPath\04.Development_Goal_wise_Setup"
+Create-PracticalBasedTopic "$installPath\05.Flutter_Doctor_and_Troubleshooting"
+
+# 4. CLI and Project Initialization (Practical / Command Based)
+$cliPath = "$baseDir\04.CLI_and_Project_Initialization"
+Create-PracticalBasedTopic "$cliPath\01.Flutter_CLI_Masterclass"
+Create-PracticalBasedTopic "$cliPath\02.Flutter_Package_and_Dependencies_Management"
+Create-PracticalBasedTopic "$cliPath\03.Flutter_Building_Production_Release_Binaries"
+
+# 5. First Flutter App (Mix of Practical and Code Based)
+$firstAppPath = "$baseDir\05.First_Flutter_App"
+Create-PracticalBasedTopic "$firstAppPath\01.Creating_Project_via_IDE_and_Naming_Rules"
+Create-CodeBasedTopic "$firstAppPath\02.Deep_Dive_Project_Architecture"
+Create-PracticalBasedTopic "$firstAppPath\03.Running_and_Debugging_App_on_Devices"
+Create-CodeBasedTopic "$firstAppPath\04.State_Execution_Hot_Reload_vs_Hot_Restart_vs_Full_Restart"
+
+Write-Host "মডিউল ০০ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

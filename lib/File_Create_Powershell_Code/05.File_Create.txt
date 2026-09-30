@@ -1,0 +1,67 @@
+# Root Directory
+$baseDir = "05.Firebase_Backend_Integration"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Practical-Based Topics
+function Create-PracticalBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Work_Flow.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Task.docx" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Core and Auth
+$coreAuthPath = "$baseDir\01.Core_and_Auth"
+
+# Practical Based Setup Topic
+Create-PracticalBasedTopic "$coreAuthPath\01.Firebase_CLI_and_FlutterFire_Configuration"
+
+# Code Based Topics
+Create-CodeBasedTopic "$coreAuthPath\02.Auth_Email_Password_Google_Phone_OTP"
+Create-CodeBasedTopic "$coreAuthPath\03.Firebase_Auth_State_Changes"
+
+
+# 2. Database, Storage, and Messaging
+$dbStoragePath = "$baseDir\02.Database_Storage_and_Messaging"
+
+Create-CodeBasedTopic "$dbStoragePath\01.Firestore_CRUD_Realtime_Streams_Queries"
+Create-CodeBasedTopic "$dbStoragePath\02.Cloud_Firestore_Offline_Persistence"
+Create-CodeBasedTopic "$dbStoragePath\03.Firebase_Storage_File_Upload_Download_URL"
+Create-CodeBasedTopic "$dbStoragePath\04.Firebase_Storage_Metadata_and_Security"
+Create-CodeBasedTopic "$dbStoragePath\05.FCM_Push_Notifications_Background_Foreground"
+Create-CodeBasedTopic "$dbStoragePath\06.FCM_Topic_Messaging_and_Payloads"
+
+
+# 3. Advanced Firebase Services
+$advServicesPath = "$baseDir\03.Advanced_Firebase_Services"
+
+Create-CodeBasedTopic "$advServicesPath\01.Firebase_Cloud_Functions"
+Create-CodeBasedTopic "$advServicesPath\02.Firebase_Hosting_and_Web_Deploy"
+Create-CodeBasedTopic "$advServicesPath\03.Firebase_Analytics_and_Remote_Config"
+Create-CodeBasedTopic "$advServicesPath\04.Firebase_Crashlytics_and_Performance_Monitoring"
+
+
+# 4. Project Based: PROJECT_5_Firebase_Notes_and_Realtime_Chat_App
+$projectPath = "$baseDir\PROJECT_5_Firebase_Notes_and_Realtime_Chat_App"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.User_Auth_and_Session_Management"
+Create-ProjectBasedTopic "$projectPath\02.Realtime_Chat_Data_Stream"
+
+Write-Host "মডিউল ০৫ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

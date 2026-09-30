@@ -1,0 +1,76 @@
+# Root Directory
+$baseDir = "03.Basic_State_Management_and_Local_Storage"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Ephemeral State Management
+$ephemeralPath = "$baseDir\01.Ephemeral_State_Management"
+
+# 01. Built-in State Tools
+Create-CodeBasedTopic "$ephemeralPath\01.Built_in_State_Tools\01.setState_Mechanics_and_Best_Practices"
+Create-CodeBasedTopic "$ephemeralPath\01.Built_in_State_Tools\02.setState_and_StatefulWidget_Lifecycle"
+Create-CodeBasedTopic "$ephemeralPath\01.Built_in_State_Tools\03.ValueNotifier_and_ValueListenableBuilder"
+
+# 02. Context State Passing
+Create-CodeBasedTopic "$ephemeralPath\02.Context_State_Passing\01.InheritedWidget_and_InheritedModel"
+Create-CodeBasedTopic "$ephemeralPath\02.Context_State_Passing\02.ValueNotifier_and_InheritedWidget"
+
+
+# 2. Key Value Storage
+$keyValuePath = "$baseDir\02.Key_Value_Storage"
+
+# 01. Local Preferences
+Create-CodeBasedTopic "$keyValuePath\01.Local_Preferences\01.SharedPreferences_User_Preferences"
+Create-CodeBasedTopic "$keyValuePath\01.Local_Preferences\02.SharedPreferences_and_SecureStorage"
+
+# 02. Secure Storage
+Create-CodeBasedTopic "$keyValuePath\02.Secure_Storage\01.FlutterSecureStorage_Encrypted_Tokens"
+
+
+# 3. Relational Local Database
+$relationalPath = "$baseDir\03.Relational_Local_Database"
+
+# 01. SQFlite Engine
+Create-CodeBasedTopic "$relationalPath\01.SQFlite_Engine\01.SQFlite_Setup_Database_Helper_Schema"
+Create-CodeBasedTopic "$relationalPath\01.SQFlite_Engine\02.SQFlite_CRUD_Insert_Read_Update_Delete"
+Create-CodeBasedTopic "$relationalPath\01.SQFlite_Engine\03.Database_Migrations_and_Version_Upgrades"
+Create-CodeBasedTopic "$relationalPath\01.SQFlite_Engine\04.SQLite_SQFlite_Local_Database"
+
+# 02. ORMs
+Create-CodeBasedTopic "$relationalPath\02.ORMs\01.Drift_ORM_Alternative_Reactive_Tables"
+
+
+# 4. NoSQL Local Database
+$noSqlPath = "$baseDir\04.NoSQL_Local_Database"
+
+# 01. Hive Key Value DB
+Create-CodeBasedTopic "$noSqlPath\01.Hive_Key_Value_DB\01.Hive_Boxes_Adapters_TypeRegistrar"
+
+# 02. Isar Object DB
+Create-CodeBasedTopic "$noSqlPath\02.Isar_Object_DB\01.Isar_Fast_Object_Database_Sync"
+
+
+# 5. Project Based: PROJECT_3_Offline_Task_and_Todo_Manager_App
+$projectPath = "$baseDir\PROJECT_3_Offline_Task_and_Todo_Manager_App"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.CRUD_Operations_With_SQFlite"
+Create-ProjectBasedTopic "$projectPath\02.Task_Completion_State_Management"
+
+Write-Host "প্রজেক্টের ফাইল ও সাব-প্রজেক্টের সঠিক স্ট্রাকচার সফলভাবে তৈরি করা হয়েছে!" -ForegroundColor Green

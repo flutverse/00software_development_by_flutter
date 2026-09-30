@@ -1,0 +1,106 @@
+# Root Directory
+$baseDir = "11.Expert_Recommended_Topics"
+
+# Helper Function for Theory-Based Topics
+function Create-TheoryBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+}
+
+# Helper Function for Practical-Based Topics
+function Create-PracticalBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Work_Flow.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Task.md" -Force | Out-Null
+}
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# 1. Flutter Engine Internals (Theory Based)
+$enginePath = "$baseDir\01.Flutter_Engine_Internals"
+Create-TheoryBasedTopic "$enginePath\01.Skia_and_Impeller_Rendering_Engines"
+Create-TheoryBasedTopic "$enginePath\02.Dart_VM_and_AOT_vs_JIT_Compilation"
+Create-CodeBasedTopic "$enginePath\03.Platform_Channels_and_FFI_for_Native_Code"
+
+# 2. Animation System (Code Based)
+$animPath = "$baseDir\02.Animation_System"
+Create-CodeBasedTopic "$animPath\01.Explicit_Animation_AnimationController_Tween"
+Create-CodeBasedTopic "$animPath\02.Implicit_Animation_AnimatedContainer_AnimatedSwitcher"
+Create-CodeBasedTopic "$animPath\03.Hero_Animation_and_Shared_Element_Transition"
+Create-CodeBasedTopic "$animPath\04.Staggered_Animation_and_Interval"
+Create-CodeBasedTopic "$animPath\05.Lottie_and_Rive_Advanced_Animation"
+Create-CodeBasedTopic "$animPath\06.Physics_Based_Simulation_Spring_Friction"
+
+# 3. Custom Widgets and Reusability (Code Based)
+$customWidgetPath = "$baseDir\03.Custom_Widgets_and_Reusability"
+Create-CodeBasedTopic "$customWidgetPath\01.Building_Reusable_Widget_Library"
+Create-CodeBasedTopic "$customWidgetPath\02.CustomPainter_Canvas_Drawing"
+Create-CodeBasedTopic "$customWidgetPath\03.Custom_Form_Fields_and_Validation_Widgets"
+Create-CodeBasedTopic "$customWidgetPath\04.Theme_Aware_Component_Design"
+
+# 4. Offline First and Sync Architecture (Code Based)
+$offlinePath = "$baseDir\04.Offline_First_and_Sync_Architecture"
+Create-CodeBasedTopic "$offlinePath\01.Local_First_Sync_Strategy"
+Create-CodeBasedTopic "$offlinePath\02.Conflict_Resolution_and_Merge_Strategies"
+Create-CodeBasedTopic "$offlinePath\03.Background_Sync_Queue"
+Create-CodeBasedTopic "$offlinePath\04.Data_Persistence_Patterns"
+
+# 5. Error Handling and Resilience (Code Based)
+$errorPath = "$baseDir\05.Error_Handling_and_Resilience"
+Create-CodeBasedTopic "$errorPath\01.Global_Error_Boundary_and_Zone"
+Create-CodeBasedTopic "$errorPath\02.Retry_Backoff_and_Circuit_Breaker"
+Create-CodeBasedTopic "$errorPath\03.Graceful_Degradation_and_Offline_Fallback"
+Create-CodeBasedTopic "$errorPath\04.User_Friendly_Error_UI_Patterns"
+
+# 6. Flutter Web Specifics (Code Based)
+$webPath = "$baseDir\06.Flutter_Web_Specifics"
+Create-CodeBasedTopic "$webPath\01.Web_Plugin_and_JS_Interop_dart_js_interop"
+Create-CodeBasedTopic "$webPath\02.URL_Strategy_and_SEO_Considerations"
+Create-CodeBasedTopic "$webPath\04.PWA_and_Service_Worker_for_Web"
+
+# 7. Flutter Desktop Specifics (Code Based)
+$desktopPath = "$baseDir\07.Flutter_Desktop_Specifics"
+Create-CodeBasedTopic "$desktopPath\01.Window_Management_bitsdojo_window"
+Create-CodeBasedTopic "$desktopPath\02.Menu_Bar_and_Tray_Icon"
+Create-CodeBasedTopic "$desktopPath\03.File_System_Access_and_Native_Dialogs"
+Create-CodeBasedTopic "$desktopPath\04.Hotkey_and_Global_Shortcuts"
+
+# 8. Observability and Analytics (Code Based)
+$analyticsPath = "$baseDir\08.Observability_and_Analytics"
+Create-CodeBasedTopic "$analyticsPath\01.Crash_Reporting_Sentry_and_Firebase_Crashlytics"
+Create-CodeBasedTopic "$analyticsPath\02.App_Insights_Mixpanel_Amplitude_PostHog"
+Create-CodeBasedTopic "$analyticsPath\03.Log_Gathering_and_Structured_Logging"
+Create-CodeBasedTopic "$analyticsPath\04.A_B_Testing_and_Feature_Flagging"
+
+# 9. AI and ML Integration in Flutter (Code Based)
+$aiPath = "$baseDir\09.AI_and_ML_Integration_in_Flutter"
+Create-CodeBasedTopic "$aiPath\01.tflite_flutter_On_Device_Inference"
+Create-CodeBasedTopic "$aiPath\02.Google_ML_Kit_Text_Face_Barcode"
+Create-CodeBasedTopic "$aiPath\03.LLM_API_OpenAI_Gemini_Claude_Integration"
+Create-CodeBasedTopic "$aiPath\04.Embeddings_and_Vector_Search_On_Device"
+Create-CodeBasedTopic "$aiPath\05.Speech_Recognition_and_TTS_Integration"
+
+# 10. Advanced Packages Ecosystem (Code Based)
+$pkgPath = "$baseDir\10.Advanced_Packages_Ecosystem"
+Create-CodeBasedTopic "$pkgPath\01.freezed_and_json_serializable_CodeGen_Stack"
+Create-CodeBasedTopic "$pkgPath\02.build_runner_and_Source_Generation"
+Create-CodeBasedTopic "$pkgPath\03.dartz_and_fpdart_Functional_Programming"
+Create-CodeBasedTopic "$pkgPath\04.flutter_hooks_and_Reactive_Primitives"
+Create-CodeBasedTopic "$pkgPath\05.rxdart_and_Reactive_Streams"
+
+# 11. Career and Portfolio Building (Practical / Theory Based)
+$careerPath = "$baseDir\11.Career_and_Portfolio_Building"
+Create-PracticalBasedTopic "$careerPath\01.GitHub_Portfolio_and_Open_Source_Contributions"
+Create-PracticalBasedTopic "$careerPath\02.Resume_and_LinkedIn_for_Flutter_Developer"
+Create-PracticalBasedTopic "$careerPath\03.Publishing_Package_pub_dev"
+Create-PracticalBasedTopic "$careerPath\04.Freelancing_and_Client_Projects_Strategy"
+Create-TheoryBasedTopic "$careerPath\05.Interview_Prep_Data_Structures_Dart"
+
+Write-Host "মডিউল ১১ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

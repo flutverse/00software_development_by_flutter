@@ -1,0 +1,81 @@
+# Root Directory
+$baseDir = "04.REST_API_and_Document_Handling"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Network Requests and HTTP
+$networkPath = "$baseDir\01.Network_Requests_and_HTTP"
+
+# 01. HTTP Package
+Create-CodeBasedTopic "$networkPath\01.HTTP_Package\01.HTTP_GET_POST_PUT_DELETE_Headers"
+Create-CodeBasedTopic "$networkPath\01.HTTP_Package\02.HTTP_and_Dio_Network_Requests"
+
+# 02. Dio Engine
+Create-CodeBasedTopic "$networkPath\02.Dio_Engine\01.Dio_Client_Configuration_Interceptors"
+Create-CodeBasedTopic "$networkPath\02.Dio_Engine\02.Dio_Error_Handling_and_Retries"
+
+
+# 2. JSON Data Parsing
+$jsonPath = "$baseDir\02.JSON_Data_Parsing"
+
+# 01. Manual Parsing
+Create-CodeBasedTopic "$jsonPath\01.Manual_Parsing\01.Manual_JSON_Parsing_Map_Conversion"
+
+# 02. Automated Serialization
+Create-CodeBasedTopic "$jsonPath\02.Automated_Serialization\01.Automated_JSON_Serialization_Freezed"
+Create-CodeBasedTopic "$jsonPath\02.Automated_Serialization\02.json_serializable_and_built_value"
+
+# 03. JSON Parsing and Data Modeling
+Create-CodeBasedTopic "$jsonPath\03.JSON_Parsing_and_Data_Modeling\01.Data_Models_and_Factory_Constructors"
+
+
+# 3. File System and Documents
+$fileSystemPath = "$baseDir\03.File_System_and_Documents"
+
+# 01. File Picker and Paths
+Create-CodeBasedTopic "$fileSystemPath\01.File_Picker_and_Paths\01.File_Picker_Image_PDF_Doc_Selection"
+Create-CodeBasedTopic "$fileSystemPath\01.File_Picker_and_Paths\02.Path_Provider_Local_Storage_Paths"
+Create-CodeBasedTopic "$fileSystemPath\01.File_Picker_and_Paths\03.File_Picker_and_Path_Provider"
+
+# 02. PDF and Printing
+Create-CodeBasedTopic "$fileSystemPath\02.PDF_and_Printing\01.PDF_Generation_Design_and_Layout"
+Create-CodeBasedTopic "$fileSystemPath\02.PDF_and_Printing\02.PDF_Generation_and_Export"
+Create-CodeBasedTopic "$fileSystemPath\02.PDF_and_Printing\03.Thermal_and_Desktop_Printing_Integration"
+Create-CodeBasedTopic "$fileSystemPath\02.PDF_and_Printing\04.Thermal_and_Desktop_Printing"
+
+
+# 4. WebSocket and Realtime Communication
+$webSocketPath = "$baseDir\04.WebSocket_and_Realtime_Communication"
+Create-CodeBasedTopic "$webSocketPath\01.WebSocket_Basics_and_Socket_IO"
+Create-CodeBasedTopic "$webSocketPath\02.Realtime_Data_Sync_Strategy"
+
+
+# 5. GraphQL and Advanced Networking
+$graphqlPath = "$baseDir\05.GraphQL_and_Advanced_Networking"
+Create-CodeBasedTopic "$graphqlPath\01.GraphQL_Flutter_Client_Basics"
+
+
+# 6. Project Based: PROJECT_4_Invoice_and_PDF_Report_Generator_App
+$projectPath = "$baseDir\PROJECT_4_Invoice_and_PDF_Report_Generator_App"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.Fetching_API_Data_Dio"
+Create-ProjectBasedTopic "$projectPath\02.PDF_Voucher_Creation_and_Thermal_Print"
+
+Write-Host "মডিউল ০৪ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

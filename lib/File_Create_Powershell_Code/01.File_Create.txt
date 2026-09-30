@@ -1,0 +1,122 @@
+# Root Directory
+$baseDir = "01.Dart_Foundations_and_Logic_Building"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Dart Basics
+$basicsPath = "$baseDir\01.Dart_Basics"
+
+# 01. Syntax and Setup
+Create-CodeBasedTopic "$basicsPath\01.Syntax_and_Setup\01.Main_Function_And_Execution_Flow"
+Create-CodeBasedTopic "$basicsPath\01.Syntax_and_Setup\02.Dart_Syntax_Basics"
+Create-CodeBasedTopic "$basicsPath\01.Syntax_and_Setup\03.Comments_and_Documentation"
+
+# 02. Variables and DataTypes
+Create-CodeBasedTopic "$basicsPath\02.Variables_and_DataTypes\01.Variables_Data_Types_and_Memory_Allocation"
+Create-CodeBasedTopic "$basicsPath\02.Variables_and_DataTypes\02.Type_Inference_var_dynamic_Object"
+Create-CodeBasedTopic "$basicsPath\02.Variables_and_DataTypes\03.Constants_final_vs_const_Compile_Vs_Runtime"
+Create-CodeBasedTopic "$basicsPath\02.Variables_and_DataTypes\04.Null_Safety_Sound_Null_Safety"
+
+# 03. Operators and Expressions
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\01.Arithmetic_and_Relational_Operators"
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\02.Logical_and_Bitwise_Operators"
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\03.Null_Aware_Operators"
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\04.Type_Test_Operators"
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\05.Conditional_and_Cascade_Operator"
+Create-CodeBasedTopic "$basicsPath\03.Operators_and_Expressions\06.Spread_Operator_and_Collection_if_for"
+
+# 04. Records and Patterns Dart 3
+Create-CodeBasedTopic "$basicsPath\04.Records_and_Patterns_Dart_3\01.Records_Basics"
+Create-CodeBasedTopic "$basicsPath\04.Records_and_Patterns_Dart_3\02.Pattern_Matching_Switch"
+Create-CodeBasedTopic "$basicsPath\04.Records_and_Patterns_Dart_3\03.Destructuring_Patterns"
+
+
+# 2. Control Flow and Loops
+$controlPath = "$baseDir\02.Control_Flow_and_Loops"
+Create-CodeBasedTopic "$controlPath\01.Decision_Making_if_else_switch_Pattern_Matching"
+Create-CodeBasedTopic "$controlPath\02.Loops_for_while_do_while_break_continue"
+
+
+# 3. Functions and Scope
+$funcPath = "$baseDir\03.Functions_and_Scope"
+Create-CodeBasedTopic "$funcPath\01.Functions_Higher_Order_Lambdas_Closures_Tear_Offs"
+Create-CodeBasedTopic "$funcPath\02.Named_Params_Default_Params_Required"
+
+
+# 4. Collections and Iterables
+$colPath = "$baseDir\04.Collections_and_Iterables"
+Create-CodeBasedTopic "$colPath\01.Collections_Lists_Sets_Maps_Spread_Flow_Operators"
+Create-CodeBasedTopic "$colPath\02.Iterable_Methods_map_where_fold_reduce"
+
+
+# 5. OOP Concepts
+$oopPath = "$baseDir\05.OOP_Concepts"
+
+# 01. Class and Object
+Create-CodeBasedTopic "$oopPath\01.Class_and_Object\01.Class_Declaration_Instance_Variables_Getters_Setters"
+Create-CodeBasedTopic "$oopPath\01.Class_and_Object\02.Constructors_Default_Named_Factory_Singleton"
+
+# 02. Encapsulation
+Create-CodeBasedTopic "$oopPath\02.Encapsulation\01.Private_Public_Protected_Underscore"
+
+# 03. Inheritance
+Create-CodeBasedTopic "$oopPath\03.Inheritance\01.Inheritance_super_Method_Overriding_Abstract_Classes"
+Create-CodeBasedTopic "$oopPath\03.Inheritance\02.Implicit_Interfaces_and_implements"
+
+# 04. Polymorphism
+Create-CodeBasedTopic "$oopPath\04.Polymorphism\01.Runtime_Polymorphism_Overriding"
+
+# 05. Abstraction and Interfaces
+Create-CodeBasedTopic "$oopPath\05.Abstraction_and_Interfaces\01.Abstract_Class_and_Interface"
+Create-CodeBasedTopic "$oopPath\05.Abstraction_and_Interfaces\02.Mixins_with_Keyword_and_Code_Reuse"
+
+# 06. Advanced OOP Features
+Create-CodeBasedTopic "$oopPath\06.Advanced_OOP_Features\01.Static_Variables_and_Static_Methods"
+Create-CodeBasedTopic "$oopPath\06.Advanced_OOP_Features\02.Generics_Classes_and_Methods"
+Create-CodeBasedTopic "$oopPath\06.Advanced_OOP_Features\03.Enhanced_Enums_With_Members"
+Create-CodeBasedTopic "$oopPath\06.Advanced_OOP_Features\04.Extension_Methods_and_Operators"
+Create-CodeBasedTopic "$oopPath\06.Advanced_OOP_Features\05.Sealed_Classes_and_Class_Modifiers"
+
+
+# 6. Async Programming
+$asyncPath = "$baseDir\06.Async_Programming"
+
+# 01. Futures
+Create-CodeBasedTopic "$asyncPath\01.Futures\01.Event_Loop_Microtask_and_Event_Queue"
+Create-CodeBasedTopic "$asyncPath\01.Futures\02.Futures_async_and_await"
+
+# 02. Streams
+Create-CodeBasedTopic "$asyncPath\02.Streams\01.Streams_Single_Subscription_and_Broadcast"
+
+# 03. Isolates
+Create-CodeBasedTopic "$asyncPath\03.Isolates\01.Isolates_Multithreading_and_Background_Tasks"
+
+# 04. Error Handling and Concurrency
+Create-CodeBasedTopic "$asyncPath\04.Error_Handling_and_Concurrency\01.Exception_Handling_try_catch_finally_Custom"
+Create-CodeBasedTopic "$asyncPath\04.Error_Handling_and_Concurrency\02.Stream_Transformations_and_Controllers"
+Create-CodeBasedTopic "$asyncPath\04.Error_Handling_and_Concurrency\03.Completer_and_Future_Groups"
+
+
+# 7. Project Based: PROJECT_1_Dart_Console_Mini_Bank_System
+$projectPath = "$baseDir\PROJECT_1_Dart_Console_Mini_Bank_System"
+Create-ProjectBasedTopic "$projectPath\01.OOP_Based_Account_Management_Savings_Current"
+Create-ProjectBasedTopic "$projectPath\02.Deposit_Withdraw_and_Transfer_Logic"
+Create-ProjectBasedTopic "$projectPath\03.CLI_User_Input_Handling_and_Validation"
+
+Write-Host "মডিউল ০১ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

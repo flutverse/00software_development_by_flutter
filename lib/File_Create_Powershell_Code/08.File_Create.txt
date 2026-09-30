@@ -1,0 +1,95 @@
+# Root Directory
+$baseDir = "08.Advanced_Architecture_Riverpod_and_Bloc"
+
+# Helper Function for Theory-Based Topics
+function Create-TheoryBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.docx" -Force | Out-Null
+}
+
+# Helper Function for Practical-Based Topics
+function Create-PracticalBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.docx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Work_Flow.docx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Task.docx" -Force | Out-Null
+}
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Architecture Patterns
+$archPath = "$baseDir\01.Architecture_Patterns"
+
+# 01. Layered Architecture (Theory Based)
+Create-TheoryBasedTopic "$archPath\01.Layered_Architecture\01.Clean_Architecture_Data_Domain_Presentation"
+
+# 02. Design Patterns (Code Based)
+Create-CodeBasedTopic "$archPath\02.Design_Patterns\01.Repository_Pattern_and_UseCases"
+Create-CodeBasedTopic "$archPath\02.Design_Patterns\02.Singleton_Factory_Observer_Strategy"
+
+# 03. Feature First vs Layer First Structure
+Create-PracticalBasedTopic "$archPath\03.Feature_First_vs_Layer_First_Structure\01.Feature_Driven_Directory_Structure"
+Create-CodeBasedTopic "$archPath\03.Feature_First_vs_Layer_First_Structure\02.MVVM_MVC_MVP_in_Flutter"
+
+
+# 2. Riverpod
+$riverpodPath = "$baseDir\02.Riverpod"
+
+# 01. Riverpod Providers
+Create-CodeBasedTopic "$riverpodPath\01.Riverpod_Providers\01.ProviderScope_Provider_StateNotifierProvider"
+Create-CodeBasedTopic "$riverpodPath\01.Riverpod_Providers\02.Riverpod_StateNotifier_AsyncNotifier"
+Create-CodeBasedTopic "$riverpodPath\01.Riverpod_Providers\03.FutureProvider_StreamProvider_NotifierProvider"
+Create-CodeBasedTopic "$riverpodPath\01.Riverpod_Providers\04.Provider_Listeners_and_Ref_Watch_vs_Read"
+
+# 02. Async and Code Generation
+Create-CodeBasedTopic "$riverpodPath\02.Async_and_Code_Generation\01.AsyncNotifier_Riverpod_Generator"
+Create-CodeBasedTopic "$riverpodPath\02.Async_and_Code_Generation\02.riverpod_generator_and_Annotation"
+Create-CodeBasedTopic "$riverpodPath\02.Async_and_Code_Generation\03.Riverpod_With_Freezed_States"
+
+
+# 3. BLoC and Cubit
+$blocPath = "$baseDir\03.BLoC_and_Cubit"
+
+# 01. Cubit Basics
+Create-CodeBasedTopic "$blocPath\01.Cubit_Basics\01.Cubit_State_Creation_BlocBuilder_BlocListener"
+Create-CodeBasedTopic "$blocPath\01.Cubit_Basics\02.Cubit_State_Persistence_and_Reset"
+
+# 02. BLoC Event Driven
+Create-CodeBasedTopic "$blocPath\02.BLoC_Event_Driven\01.BLoC_Events_States_Event_Transformers"
+Create-CodeBasedTopic "$blocPath\02.BLoC_Event_Driven\02.BlocConsumer_and_BlocSelector"
+Create-CodeBasedTopic "$blocPath\02.BLoC_Event_Driven\03.HydratedBloc_and_Persistence"
+
+# 03. Bloc Testing
+Create-CodeBasedTopic "$blocPath\03.Bloc_Testing\01.bloc_test_and_Mock_Bloc"
+Create-CodeBasedTopic "$blocPath\03.Bloc_Testing\02.Bloc_Clean_Architecture_Boilerplate"
+
+
+# 4. Dependency Injection
+$diPath = "$baseDir\04.Dependency_Injection"
+
+Create-CodeBasedTopic "$diPath\02.GetIt_Service_Locator_Setup"
+Create-CodeBasedTopic "$diPath\03.Injectable_and_GetIt_Code_Generation"
+
+
+# 5. Project Based: PROJECT_8_Food_Delivery_and_Multi_Vendor_App
+$projectPath = "$baseDir\PROJECT_8_Food_Delivery_and_Multi_Vendor_App"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.Clean_Architecture_Setup_Bloc"
+Create-ProjectBasedTopic "$projectPath\02.Live_Order_Tracking_and_Cart_Management"
+
+Write-Host "মডিউল ০৮ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

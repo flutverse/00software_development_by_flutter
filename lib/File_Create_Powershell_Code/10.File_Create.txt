@@ -1,0 +1,67 @@
+# Root Directory
+$baseDir = "10.Real_World_and_Next-Gen_Future_Concept_Projects"
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. PROJECT_9_Full_ECommerce_Platform
+$p9 = "$baseDir\PROJECT_9_Full_ECommerce_Platform"
+Create-ProjectBasedTopic "$p9\01.Multi_Vendor_Product_Catalog_and_Search"
+Create-ProjectBasedTopic "$p9\02.Cart_Wishlist_and_Checkout_Flow"
+Create-ProjectBasedTopic "$p9\03.Payment_Gateway_Integration_Bkash_Stripe"
+Create-ProjectBasedTopic "$p9\04.Admin_Dashboard_and_Inventory_Management"
+
+# 2. PROJECT_10_Hospital_Management_and_Diagnostic_System
+$p10 = "$baseDir\PROJECT_10_Hospital_Management_and_Diagnostic_System"
+Create-ProjectBasedTopic "$p10\01.Role_Based_Auth_Doctor_Patient_LabTech_Admin"
+Create-ProjectBasedTopic "$p10\02.Medical_Device_Data_Stream_BLE_Serial"
+Create-ProjectBasedTopic "$p10\03.Automated_PDF_Report_Generation"
+Create-ProjectBasedTopic "$p10\04.Thermal_Billing_Invoice_Printing"
+
+# 3. PROJECT_11_Ride_Sharing_and_Delivery_Tracking_App
+$p11 = "$baseDir\PROJECT_11_Ride_Sharing_and_Delivery_Tracking_App"
+Create-ProjectBasedTopic "$p11\01.Live_GPS_Location_Tracking_Google_Maps"
+Create-ProjectBasedTopic "$p11\02.Driver_and_Rider_Realtime_Socket_Matching"
+Create-ProjectBasedTopic "$p11\03.Fare_Calculation_and_In_App_Payments"
+
+# 4. PROJECT_12_School_and_University_ERP_System
+$p12 = "$baseDir\PROJECT_12_School_and_University_ERP_System"
+Create-ProjectBasedTopic "$p12\01.Student_Teacher_Parent_Portal"
+Create-ProjectBasedTopic "$p12\02.Fees_Payment_and_Receipt_PDF_Export"
+Create-ProjectBasedTopic "$p12\03.Attendance_QR_Scan_and_Exam_Marksheet"
+
+# 5. PROJECT_13_Multi_Platform_POS_and_Inventory_System
+$p13 = "$baseDir\PROJECT_13_Multi_Platform_POS_and_Inventory_System"
+Create-ProjectBasedTopic "$p13\01.Desktop_and_Tablet_Responsive_POS_Checkout"
+Create-ProjectBasedTopic "$p13\02.Barcode_Scanning_and_Thermal_Receipt_Print"
+Create-ProjectBasedTopic "$p13\03.Offline_First_Local_DB_Sync_Drift_SQLite"
+
+# 6. PROJECT_14_AI_Powered_Personal_Health_and_Triage_Assistant
+$p14 = "$baseDir\PROJECT_14_AI_Powered_Personal_Health_and_Triage_Assistant"
+Create-ProjectBasedTopic "$p14\01.LLM_On_Device_Or_API_Symptom_Checker"
+Create-ProjectBasedTopic "$p14\02.Computer_Vision_Skin_and_Eye_Lesion_Analysis"
+Create-ProjectBasedTopic "$p14\03.Realtime_Voice_AI_Medical_Consultant"
+
+# 7. PROJECT_15_Smart_City_and_IoT_Edge_Control_Center
+$p15 = "$baseDir\PROJECT_15_Smart_City_and_IoT_Edge_Control_Center"
+Create-ProjectBasedTopic "$p15\01.Realtime_MQTT_and_BLE_Sensor_Data_Dashboard"
+Create-ProjectBasedTopic "$p15\03.Geofenced_Emergency_Response_Dispatch"
+
+# 8. PROJECT_16_AR_Spatial_Shopping_and_Interior_Visualizer
+$p16 = "$baseDir\PROJECT_16_AR_Spatial_Shopping_and_Interior_Visualizer"
+Create-ProjectBasedTopic "$p16\01.ARCore_ARKit_3D_Product_Placement_In_Room"
+Create-ProjectBasedTopic "$p16\02.Spatial_Gesture_and_Color_Customization"
+Create-ProjectBasedTopic "$p16\03.Instant_3D_Asset_Rendering_Engine"
+
+# 9. PROJECT_17_Decentralized_Identity_and_Web3_Wallet
+$p17 = "$baseDir\PROJECT_17_Decentralized_Identity_and_Web3_Wallet"
+Create-ProjectBasedTopic "$p17\01.Self_Sovereign_Identity_DID_and_Biometrics"
+Create-ProjectBasedTopic "$p17\02.Encrypted_Local_Key_Vault_and_Multi_Chain_Sync"
+Create-ProjectBasedTopic "$p17\03.Smart_Contract_Execution_and_Document_Verification"
+
+Write-Host "মডিউল ১০ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

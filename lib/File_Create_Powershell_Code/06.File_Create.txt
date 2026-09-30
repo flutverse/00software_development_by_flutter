@@ -1,0 +1,68 @@
+# Root Directory
+$baseDir = "06.Device_Hardware_Sensors_and_IoT"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Media and Sensors
+$mediaSensorsPath = "$baseDir\01.Media_and_Sensors"
+
+Create-CodeBasedTopic "$mediaSensorsPath\01.Camera_Package_Live_Feed"
+Create-CodeBasedTopic "$mediaSensorsPath\02.Camera_Access_and_QR_Barcode_Scanning"
+Create-CodeBasedTopic "$mediaSensorsPath\03.QR_Barcode_Scanning_Hardware"
+Create-CodeBasedTopic "$mediaSensorsPath\04.Geolocator_GPS_Location_Permissions"
+Create-CodeBasedTopic "$mediaSensorsPath\05.GPS_Location_and_Geolocator_Maps"
+Create-CodeBasedTopic "$mediaSensorsPath\06.Accelerometer_Gyroscope_Sensors"
+Create-CodeBasedTopic "$mediaSensorsPath\07.SensorsPlus_Advanced_Sensors"
+
+
+# 2. Security and Connectivity
+$securityConnPath = "$baseDir\02.Security_and_Connectivity"
+
+Create-CodeBasedTopic "$securityConnPath\01.Local_Authentication_Fingerprint_FaceID"
+Create-CodeBasedTopic "$securityConnPath\02.Biometric_Auth_Verification_Flows"
+Create-CodeBasedTopic "$securityConnPath\03.Bluetooth_BLE_Scanning_Connection"
+Create-CodeBasedTopic "$securityConnPath\04.Bluetooth_BLE_Services_and_Characteristics"
+Create-CodeBasedTopic "$securityConnPath\05.Serial_Port_RS232_USB_Desktop_Communication"
+
+
+# 3. Maps and Location Services
+$mapsPath = "$baseDir\03.Maps_and_Location_Services"
+
+Create-CodeBasedTopic "$mapsPath\01.Google_Maps_Flutter_Markers_Polygons"
+Create-CodeBasedTopic "$mapsPath\02.MapBox_and_OSM_Alternatives"
+Create-CodeBasedTopic "$mapsPath\03.Geocoding_and_Reverse_Geocoding"
+Create-CodeBasedTopic "$mapsPath\04.Background_Location_Tracking"
+
+
+# 4. Notifications and Background Tasks
+$bgTasksPath = "$baseDir\04.Notifications_and_Background_Tasks"
+
+Create-CodeBasedTopic "$bgTasksPath\01.Local_Notifications_flutter_local_notifications"
+Create-CodeBasedTopic "$bgTasksPath\02.Workmanager_and_Background_Execution"
+Create-CodeBasedTopic "$bgTasksPath\03.Scheduled_Notifications_and_Alarms"
+
+
+# 5. Project Based: PROJECT_6_IoT_Sensor_Monitor_and_QR_Scanner_App
+$projectPath = "$baseDir\PROJECT_6_IoT_Sensor_Monitor_and_QR_Scanner_App"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.BLE_Device_Data_Streaming"
+Create-ProjectBasedTopic "$projectPath\02.QR_Code_Attendance_and_Location_Tracker"
+
+Write-Host "মডিউল ০৬ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green

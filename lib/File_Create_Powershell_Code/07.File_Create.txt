@@ -1,0 +1,68 @@
+# Root Directory
+$baseDir = "07.Intermediate_State_Management_Provider_and_GetX"
+
+# Helper Function for Code-Based Topics
+function Create-CodeBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Theory.pptx" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.Code_Breakdown.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Dictionary.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\04.Full_Demo.dart" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\05.Task.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\06.Practice.dart" -Force | Out-Null
+}
+
+# Helper Function for Project-Based Topics
+function Create-ProjectBasedTopic($path) {
+    New-Item -ItemType File -Path "$path\01.Diagram.dio" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\02.File_Structure.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\03.Steps.md" -Force | Out-Null
+    New-Item -ItemType File -Path "$path\main.dart" -Force | Out-Null
+}
+
+# 1. Provider Pattern
+$providerPath = "$baseDir\01.Provider_Pattern"
+
+# 01. Provider Fundamentals
+Create-CodeBasedTopic "$providerPath\01.Provider_Fundamentals\01.ChangeNotifierProvider_and_Consumer"
+Create-CodeBasedTopic "$providerPath\01.Provider_Fundamentals\02.Provider_Architecture_and_State"
+Create-CodeBasedTopic "$providerPath\01.Provider_Fundamentals\03.Selector_and_Consumer_Optimization"
+
+# 02. Advanced Providers
+Create-CodeBasedTopic "$providerPath\02.Advanced_Providers\01.MultiProvider_ProxyProvider_State_Sharing"
+Create-CodeBasedTopic "$providerPath\02.Advanced_Providers\02.ChangeNotifierProxyProvider"
+Create-CodeBasedTopic "$providerPath\02.Advanced_Providers\03.Provider_Scope_and_Architecture_Best_Practices"
+
+
+# 2. GetX Framework
+$getXPath = "$baseDir\02.GetX_Framework"
+
+# 01. Reactive State and Controllers
+Create-CodeBasedTopic "$getXPath\01.Reactive_State_and_Controllers\01.GetX_Reactive_State_Obx_GetxController"
+Create-CodeBasedTopic "$getXPath\01.Reactive_State_and_Controllers\02.GetX_State_Dependency_and_Navigation"
+
+# 02. Dependency and Navigation
+Create-CodeBasedTopic "$getXPath\02.Dependency_and_Navigation\01.GetX_Dependency_Management_GetPut_GetFind"
+Create-CodeBasedTopic "$getXPath\02.Dependency_and_Navigation\02.GetX_Named_Routes_Navigation_Dialogs"
+
+
+# 3. Payment Integrations
+$paymentPath = "$baseDir\03.Payment_Integrations"
+
+# 01. Local Payment Gateways
+Create-CodeBasedTopic "$paymentPath\01.Local_Payment_Gateways\01.bKash_Merchant_API_Integration"
+Create-CodeBasedTopic "$paymentPath\01.Local_Payment_Gateways\02.Nagad_Payment_API_Integration"
+Create-CodeBasedTopic "$paymentPath\01.Local_Payment_Gateways\03.SSLCommerz_and_Local_Aggregators"
+
+# 02. Global Payment Gateways
+Create-CodeBasedTopic "$paymentPath\02.Global_Payment_Gateways\01.Stripe_Payment_Intent_Cards"
+Create-CodeBasedTopic "$paymentPath\02.Global_Payment_Gateways\02.Razorpay_and_PayPal_Integration"
+
+
+# 4. Project Based: PROJECT_7_Mini_ECommerce_App_With_Payment
+$projectPath = "$baseDir\PROJECT_7_Mini_ECommerce_App_With_Payment"
+
+# Sub-projects inside Project Folder (Project Based Structure)
+Create-ProjectBasedTopic "$projectPath\01.Cart_State_Management_Provider"
+Create-ProjectBasedTopic "$projectPath\02.Payment_Gateway_Integration"
+
+Write-Host "মডিউল ০৭ এর ফাইল ও ফোল্ডার স্ট্রাকচার সফলভাবে তৈরি হয়েছে!" -ForegroundColor Green
